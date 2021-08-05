@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./CalorieData.css";
-
+const apiUrl = "https://glacial-brushlands-70999.herokuapp.com/api/user_data";
 export default function CalorieData() {
   const [userData, setUserData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/user_data")
+      .get(apiUrl)
       .then((res) => {
         setUserData(res.data);
       })

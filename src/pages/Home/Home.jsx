@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import "./Home.css";
+const apiUrl = "https://glacial-brushlands-70999.herokuapp.com/api/tdee";
 
 export default function Home() {
   const [calorieData, setCalorieData] = useState(null);
@@ -12,7 +13,7 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:8000/api/tdee", {
+    const response = await axios.post(apiUrl, {
       weight,
       fat,
       level,

@@ -15,10 +15,11 @@ export default function Header() {
           <li className="nav__item">
             <NavLink
               activeClassName="active"
-              to="/counter"
+              exact
+              to="/"
               className="nav__link"
             >
-              Calorie Counter
+              Home
             </NavLink>
           </li>
           <li className="nav__item">
